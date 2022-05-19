@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<!-- em template eu tenho exatamente o que eu quero mostrar
+na minha aplicação -->
+ <div>
+    <Comp/>
+  <h1>Component pai</h1>
+  <LifeCycle/>
+  <Info/>
+ </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+
+// em script eu exporto esse component
+<script>
+
+import Comp from './components/comp.vue'
+import LifeCycle from './components/LifeCycle.vue'
+import Info from './components/info.vue'
+  export default {
+    name: 'App',
+    components:{
+      Comp,
+      LifeCycle,
+      Info
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body{
+    background-color: aqua;
+  }
 </style>
