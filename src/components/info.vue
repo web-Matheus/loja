@@ -17,11 +17,16 @@
         <input type="text" v-model="form_email">
         <input type="submit">
     </form>
+    <Reutilizacao/>
    </div>
 </template>
 <script>
+import Reutilizacao from './Reutilização.vue'
 export default {
     name:"Info",
+    components:{
+        Reutilizacao
+    },
     data() {
        return{
            mostrar_list:true,
@@ -41,7 +46,7 @@ export default {
         show_list(){
             this.mostrar_list = !this.mostrar_list
         },
-        //método para captar valor o formulário
+        //método para captar valor o formulário 
         enviar_form(e){
             e.preventDefault()
             const name = this.form_name;
